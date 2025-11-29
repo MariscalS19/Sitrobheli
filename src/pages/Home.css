@@ -1,42 +1,68 @@
+.homeMainContainer {
+    display: flex;
+    height: 100vh;
+    background: var(--primary-color);
+    overflow: hidden;
+    transition: all 0.5s ease-out;
+}
+
 .homeContainer {
+    container-type: inline-size;
+    container-name: homeContainer;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
     text-align: center;
-    padding: 2rem;
-    background: var(--primary-color);
     color: white;
+    gap: 3em;
+    padding: 0 5em;
+    transition: all 0.5s ease-out;
+    flex: 4;
+    min-width: 0;
 }
-
 .homeContainerIcon {
-    width: 10em;
-    height: 10em;
-    margin-bottom: 2rem;
+    width: 1em;
+    height: 1em;
+    margin: 0 0.2em;
     fill: white;
-    margin: 0 auto;
 }
 
 .homeContainerTitle {
-    font-size: 6em;
-    margin-bottom: 1rem;
+    display: inline-flex;
+    font-size: 7em;
+    white-space: nowrap;
 }
 
+@container homeContainer (width < 1000px) {
+    .homeContainerIcon {
+        width: 1em;
+        height: 1em;
+    }
+    .homeContainerTitle {
+        font-size: 6em;
+    }
+}
 .homeContainerButtons {
-    margin-top: 2rem;
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    gap: 4rem;
 }
 
 .btn {
+    width: 13em;
+    font-family: 'GFS Didot';
+    font-size: 1.5em;
     color: inherit;
-    background: #000;
-    padding: 1.2em 3em;
+    padding: 0.7em 0;
     border-radius: 2em;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid white;
+    transition: background 0.3s ease;
 }
 
 .btn:hover {
-    background: #333;
+    background: var(--dark);
 }

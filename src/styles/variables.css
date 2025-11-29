@@ -12,7 +12,7 @@
         rgba(37, 87, 61, 1) 43%,
         rgba(98, 165, 125, 1) 100%
     );
-    --background-color: #3c3744;
+    --background-color: #3c374471;
     --pastel-green: #c8e6c9; /* Verde pastel, acento suave */
     --dark: #050505; /* Verde intenso, acento fuerte */
 }
