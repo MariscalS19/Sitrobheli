@@ -1,9 +1,22 @@
 .homeMainContainer {
     display: flex;
     height: 100vh;
-    background: var(--primary-color);
     overflow: hidden;
     transition: all 0.5s ease-out;
+    background: #000000ab;
+}
+
+.homeMainContainer::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-image: url('../../public/assets/images/backgrounds/sitrobg.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    filter: blur(0.7px);
 }
 
 .homeContainer {
@@ -22,11 +35,20 @@
     flex: 4;
     min-width: 0;
 }
-.homeContainerIcon {
-    width: 1em;
-    height: 1em;
-    margin: 0 0.2em;
-    fill: white;
+
+.homeContainerLogo {
+    width: 13em;
+    height: auto;
+    /* Control de color del SVG */
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
+}
+
+.homeContainerLogo:hover {
+    filter: brightness(0) invert(1)
+        drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+    transform: scale(1.05);
+    transition: all 0.3s ease;
 }
 
 .homeContainerTitle {
@@ -36,12 +58,8 @@
 }
 
 @container homeContainer (width < 1000px) {
-    .homeContainerIcon {
-        width: 1em;
-        height: 1em;
-    }
-    .homeContainerTitle {
-        font-size: 6em;
+    .homeContainerLogo {
+        width: 9em;
     }
 }
 .homeContainerButtons {
@@ -50,7 +68,7 @@
 }
 
 .btn {
-    width: 13em;
+    width: 10em;
     font-family: 'GFS Didot';
     font-size: 1.5em;
     color: inherit;
