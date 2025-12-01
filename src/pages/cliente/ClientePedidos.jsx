@@ -55,7 +55,7 @@ export default function ClientePedidos() {
 
         <div className="logoSitrobheli">
           <img
-            src="/assets/images/logos/sitroLogo.svg"
+            src="/assets/images/backup/sitroLogo.svg"
             alt="Sitrobheli Logo"
             className="sitroLogoIMG"
           />
