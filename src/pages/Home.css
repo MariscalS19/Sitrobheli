@@ -11,7 +11,7 @@
     position: absolute;
     z-index: -1;
     inset: 0;
-    background-image: url('../../public/assets/images/backgrounds/sitrobg.webp');
+    background-image: var(--bg-image);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -39,9 +39,12 @@
 .homeContainerLogo {
     width: 13em;
     height: auto;
-    /* Control de color del SVG */
-    filter: brightness(0) invert(1);
-    transition: filter 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.homeContainerLogo:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 10px currentColor);
 }
 
 .homeContainerLogo:hover {

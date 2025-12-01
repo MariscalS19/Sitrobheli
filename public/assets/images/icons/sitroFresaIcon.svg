@@ -10,7 +10,7 @@
             >
                 <g
                     transform='translate(0.000000,83.000000) scale(0.100000,-0.100000)'
-                    fill='#000000'
+                    fill='currentColor'
                     stroke='none'>
                     <path
                         d='M2593 818 c-19 -25 -23 -68 -11 -115 l13 -48 5 75 c3 42 9 74 15 73

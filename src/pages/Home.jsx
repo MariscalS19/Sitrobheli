@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './Home.css';
 import Register from './Register.jsx';
+import SitroLogo from '../Components/SitroLogo.jsx';
 
 export default function Home() {
     const [showRegister, setShowRegister] = useState(false);
@@ -12,11 +13,7 @@ export default function Home() {
         <div className='homeMainContainer'>
             <div className='homeContainer'>
                 <h1 className='homeContainerTitle'>
-                    <img
-                        src='/assets/images/logos/sitroLogo.svg'
-                        alt='Sitrobheli Logo'
-                        className='homeContainerLogo'
-                    />
+                    <SitroLogo className='homeContainerLogo' />
                 </h1>
 
                 <div className='homeContainerButtons'>
